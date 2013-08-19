@@ -1,0 +1,331 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="home">
+		<div data-role="header" data-position="fixed" data-id="head">
+			<h1>DRok's Demo(Primary Page)</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-filter="true">
+				<li data-role="list-divider">Secondary Page Option</li>
+				<li>
+					<a href="#secondary">
+						<h3>2nd Page</h3>
+						<p>This page has examples of list items with pictures and links.</p>
+					</a>
+				</li>
+				<li data-role="list-divider">Tertiary Page Option</li>
+				<li>
+					<a href="#tertiary">
+						<h3>3rd Page</h3>
+						<p>This page has examples of menu option such as collapsible and accordian.</p>
+						<span class="ui-li-count">3</span>
+					</a>
+				</li>
+				<li data-role="list-divider">Quaternary Page Option</li>
+				<li>
+					<a href="#quaternary">
+						<h3>4th Page</h3>
+						<p>This page will have an example of the the grid view</p>
+					</a>
+				</li>
+				<li data-role="list-divider">Quinary Page Option</li>
+				<li>
+					<a href="#quinary">
+						<h3>5th Page</h3>
+						<p>This page will have an example of the the list grid view</p>
+					</a>
+				</li>
+				<li data-role="list-divider">The Form</li>
+				<li>
+					<a href="#form">
+						<h3>Form</h3>
+						<p>This page will have an example of the the form</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+<!-- Footer nav set to fixed to stay @ bottom and the id keeps the them from reloading page to page.  All footers/headers must have the same id -->
+		<div data-role="footer" data-position="fixed" data-id="bottomnav">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="plus">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- 2nd page -->
+	<div data-role="page" id="secondary" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed" data-id="head">
+			<h1>This is the 2nd page</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview">
+				<li>
+					<a href="#tertiary">
+						<img src="images/chest.png">
+						<h3>Info 1</h3>
+						<p>This is the information for item #1</p>
+					</a>
+				</li>
+				<li>Info 2</li>
+				<li>Info 3</li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="bottomnav">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="plus">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Favorites page page -->
+	<div data-role="page" id="favorite" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed" data-id="head">
+			<h1>This is the favorites page</h1>
+		</div>
+		<div data-role="content">
+			<p>This is a bunch of data on the favorites page</p>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="bottomnav">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="plus" class="ui-btn-active">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- 3rd page -->
+	<div data-role="page" id="tertiary" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed" data-id="head">
+			<h1>This is the 3rd page</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Example Collapsible Menu #1</h3>
+				<p>Click here to see #1 in action</p>
+			</div>
+<!-- Accordian Menu -->
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="b">
+					<h3>Example Accordian Menu #2</h3>
+					<p>This is the data for menu #2</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b">
+					<h3>Example Accordian Menu #3</h3>
+					<p>This is the data for menu #3</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="bottomnav">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="plus">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- 4th page -->
+ 	<div data-role="page" id="quaternary" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed" data-id="head">
+			<h1>This is the 4th page</h1>
+		</div>
+<!-- Divider between elements and seperated buttons -->
+		<div data-role="content">
+			<form>
+				<div data-role="fieldcontain">
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><input type="reset" value="Reset" data-theme="b"/></div>
+						<div class="ui-block-b"><input type="submit" value="Update" data-theme="a"/></div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="bottomnav">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="plus">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- 5th page -->
+ 	<div data-role="page" id="quinary" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed" data-id="head">
+			<h1>This is the 5th page</h1>
+		</div>
+		<div data-role="content">
+<!-- 50% grid example -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider">Data 1</li>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+					</ul>
+				</div>
+				<div class="ui-block-b">
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider">Data 2</li>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+<!-- 33% grid example -->
+		<div class="ui-grid-b">
+			<div class="ui-block-a"><div class="ui-bar ui-bar-a">Example1</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-a">Example2</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-a">Example3</div></div>
+<!-- Each new block a creates a new row -->
+			<div class="ui-block-a"><div class="ui-bar ui-bar-a">Example4</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-a">Example5</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-a">Example6</div></div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="bottomnav">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="plus">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- The form -->
+	<div data-role="page" id="form" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed" data-id="head">
+			<h1>Demo Form</h1>
+		</div>
+		<div data-role="content">
+				<form action="" method="post" id="recordform">
+				<!-- for every form element you create the name & id must be the same -->
+					<div data-role="fieldcontain">
+						<label for="itemname">Item Name</label>
+						<input type="text" name="itemname" id="itemname">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="type">Type</label>
+						<input type="text" name="type" id="type">
+					</div>
+				<!-- jQuery mobile will dynamically scale textarea -->
+					<div data-role="fieldcontain">
+						<label for="dropped">Where dropped</label>
+						<textarea></textarea>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="slider">Slider</label>
+						<input type="range" name="slider" id="slider" value="0" min="0" max="5000" />
+					</div>
+				<!-- demo of search feature, not typicall in the form -->
+					<div data-role="fieldcontain">
+						<label for="search">Type</label>
+						<input type="search" name="search" id="search">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="valuable">Valuable?</label>
+						<select data-role="slider">
+				<!-- Values sent to server side are off/on not the nope/yerp -->
+							<option value="off">Nope</option>
+							<option value="on">Yerp</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+					<!--  datatype in fieldset defaults to vertical but can be changed Example:  <fieldset data-role="controlgroup" data-type="horizontal"> -->
+						<fieldset data-role="controlgroup">
+							<legend>What mob was it?</legend>
+							<input type="radio" value="Murloc" name="mob" id="mob1" />
+							<label for="mob1">Murloc</label>
+							<input type="radio" value="Werewolf" name="mob" id="mob2" />
+							<label for="mob2">Werewolf</label>
+							<input type="radio" value="Vampire" name="mob" id="mob3" />
+							<label for="mob3">vampire</label>
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain">
+					<!--  can select as many checkboxes as needed.  Multiple selections allowed. -->
+						<fieldset data-role="controlgroup">
+							<legend>Difficulty of Fight</legend>
+							<input type="checkbox" value="Easy" name="difficulty" id="difficulty1" />
+							<label for="difficulty1">Easy</label>
+							<input type="checkbox" value="Medium" name="difficulty" id="difficulty2" />
+							<label for="difficulty2">Medium</label>
+							<input type="checkbox" value="Difficult" name="difficulty" id="difficulty3" />
+							<label for="difficulty3">Difficult</label>
+						</fieldset>
+					</div>
+			<!-- Drop down box **Will always use the native browser theme**  Can be changed to to Jquery specific -->		
+					<div data-role="fieldcontain">
+						<label for="lootkind">What kind of Loot?</label>	
+						<select name="lootkind" id="lootkind" data-native-menu="false">
+							<option data-placeholder="true">Choose an loot group.</option>
+							<optgroup label="group1">
+								<option value="weapon1">Weapon</option>
+								<option value="armor1">Armor</option>
+								<option value="accessory1">Accessory</option>
+							</optgroup>
+							<optgroup label="group2">
+								<option value="weapon2">Weapon</option>
+								<option value="armor2">Armor</option>
+								<option value="accessory2">Accessory</option>
+							</optgroup>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<input type="reset" value="Reset" data-theme="d"><br>
+						<input type="submit" value="Submit" data-theme="b">
+					</div>
+				</form>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="bottomnav">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="plus" class="ui-btn-active">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
